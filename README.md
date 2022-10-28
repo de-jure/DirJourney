@@ -1,3 +1,4 @@
-## DirJourney
-# Choose your editors!
+# DirJourney
+
+## Choose your editors!
 ![](images/formats.png)
