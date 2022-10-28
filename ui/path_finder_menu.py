@@ -1,6 +1,8 @@
 import os
 import curses
-from config import PATH_COLOR, PICKED_LINE_COLOR, UNPICKED_LINE_COLOR
+from config import PATH_TEXT_COLOR, PATH_BACKGROUND_COLOR
+from config import UNPICKED_LINE_TEXT_COLOR, UNPICKED_LINE_BACKGROUND_COLOR
+from config import PICKED_LINE_TEXT_COLOR, PICKED_LINE_BACKGROUND_COLOR
 
 
 from utils.dirlist import get_dir_list
@@ -10,9 +12,9 @@ from core.filename_formatter import filename_formatter
 def path_finder_menu() -> str:
     def character(stdscr,) -> str:
         dir = os.getcwd() + '/'
-        curses.init_pair(1, PATH_COLOR, curses.COLOR_BLACK)
-        curses.init_pair(2, UNPICKED_LINE_COLOR, curses.COLOR_BLACK)
-        curses.init_pair(3, PICKED_LINE_COLOR, curses.COLOR_BLACK)
+        curses.init_pair(1, PATH_TEXT_COLOR, PATH_BACKGROUND_COLOR)
+        curses.init_pair(2, UNPICKED_LINE_TEXT_COLOR, UNPICKED_LINE_BACKGROUND_COLOR)
+        curses.init_pair(3, PICKED_LINE_TEXT_COLOR, PICKED_LINE_BACKGROUND_COLOR)
 
         while True:
             dirlist = get_dir_list(dir)
