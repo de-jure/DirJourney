@@ -1,6 +1,5 @@
 # DirJourney by de_jure
-<br />
+__
 ## Choose your editors!
-[./formats.py](/formats.py)
-<br />
+[./formats.py](/formats.py)__
 ![](images/formats.png)
