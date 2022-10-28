@@ -1,9 +1,11 @@
 import os
 from ui.path_finder_menu import path_finder_menu
+from formats import get_file_editor
 
 if __name__ == '__main__':
-    try: 
+    try:
         file_path = path_finder_menu()
-        os.system(f'cat {file_path}')
+        editor = get_file_editor(file_path)
+        os.system(f'{editor} {file_path}')
     except KeyboardInterrupt:
         pass
