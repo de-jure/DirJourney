@@ -1,6 +1,6 @@
 formats = {
     # "format": "editor",
-    "py": "code",
+    "py": "cat",
     "else": "cat", # default editor for another formats
 }
 
