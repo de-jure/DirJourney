@@ -10,3 +10,9 @@ FILENAME_MAX_LEN = 15
 PATH_COLOR = 5
 PICKED_LINE_COLOR = 2
 UNPICKED_LINE_COLOR = 7
+
+FORMATS = {
+    # "format": "editor",
+    "py": "cat",
+    "else": "cat", # default editor
+}

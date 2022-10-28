@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 from ui.path_finder_menu import path_finder_menu
-from formats import get_file_editor
+from core.formats import get_file_editor
 
 
 if __name__ == '__main__':

@@ -3,6 +3,6 @@
 ## Choose your editors
 
 ![](images/formats.png)
-> [./formats.py](/formats.py)
+> [./config.py](/config.py)
 
 ## Be brave! Stand with Ukraine! :ukraine:
