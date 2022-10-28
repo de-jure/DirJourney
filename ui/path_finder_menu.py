@@ -1,27 +1,18 @@
 import os
 import curses
+from config import PATH_COLOR, PICKED_LINE_COLOR, UNPICKED_LINE_COLOR
 
 
 from utils.dirlist import get_dir_list
 from core.filename_formatter import filename_formatter
 
 
-icol = {
-    'red': 1,
-    'green': 2,
-    'yellow': 3,
-    'blue': 4,
-    'magenta': 5,
-    'cyan': 6,
-    'white': 7,
-}
-
 def path_finder_menu() -> str:
     def character(stdscr,) -> str:
         dir = os.getcwd() + '/'
-        curses.init_pair(1, 7, curses.COLOR_BLACK)
-        curses.init_pair(2, icol['green'], curses.COLOR_BLACK)
-        curses.init_pair(3, icol['magenta'], curses.COLOR_BLACK)
+        curses.init_pair(1, PATH_COLOR, curses.COLOR_BLACK)
+        curses.init_pair(2, UNPICKED_LINE_COLOR, curses.COLOR_BLACK)
+        curses.init_pair(3, PICKED_LINE_COLOR, curses.COLOR_BLACK)
 
         while True:
             dirlist = get_dir_list(dir)
@@ -31,14 +22,14 @@ def path_finder_menu() -> str:
             while True:
                 stdscr.erase()
 
-                stdscr.addstr(f"{dir}\n", curses.color_pair(3))
+                stdscr.addstr(f"{dir}\n", curses.color_pair(1))
 
                 for i in range(len(dirlist)):
                     if i == option:
-                        attr = curses.color_pair(2)
+                        attr = curses.color_pair(3)
                         stdscr.addstr(f'> ', attr)
                     else:
-                        attr = curses.color_pair(1)
+                        attr = curses.color_pair(2)
                         stdscr.addstr(f'  ', attr)
                         
                     stdscr.addstr(f'{filename_formatter(dirlist[i])}' + '\n', attr)
