@@ -3,6 +3,7 @@ import curses
 
 
 from utils.dirlist import get_dir_list
+from core.filename_formatter import filename_formatter
 
 
 icol = {
@@ -14,15 +15,6 @@ icol = {
     'cyan': 6,
     'white': 7,
 }
-
-
-def file_name_formatter(file_name: str, max_size: int = 15) -> str:
-    file_name = file_name.ljust(max_size)
-    if len(file_name) > max_size:
-        return file_name[:max_size-3] + '...'
-    else:
-        return file_name
-
 
 def path_finder_menu() -> str:
     def character(stdscr,) -> str:
@@ -49,7 +41,7 @@ def path_finder_menu() -> str:
                         attr = curses.color_pair(1)
                         stdscr.addstr(f'  ', attr)
                         
-                    stdscr.addstr(f'{file_name_formatter(dirlist[i])}' + '\n', attr)
+                    stdscr.addstr(f'{filename_formatter(dirlist[i])}' + '\n', attr)
                     # stat = os.stat(dirlist[i])
                     # print(stat, type(stat))
                     # os.path.getmtime()
