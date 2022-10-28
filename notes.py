@@ -91,9 +91,9 @@
 
 # import os
 # dir_list = os.listdir('.')
- 
+
 # print("Files and directories in '", path, "' :")
- 
+
 # prints all files
 # print(dir_list)
 
@@ -114,7 +114,3 @@
 
 
 # ''.endswith()
-
-
-
-
