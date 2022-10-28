@@ -1,16 +1,26 @@
+"""_summary_
+
+Returns:
+    _type_: _description_
+"""
 import sys
 from getpass import getpass
 
 
-def start() -> list:
+def start() -> None:
+    """_summary_
+
+    Returns:
+        list: _description_
+    """
     args = sys.argv
     login, password = None, None
 
-    for i in range(len(args)):
-        try: 
-            if args[i] == '-l':
+    for i, arg in enumerate(args):
+        try:
+            if arg == '-l':
                 login = args[i+1]
-            elif args[i] == '-p':
+            elif arg == '-p':
                 password = args[i+1]
         except IndexError:
             pass
@@ -25,5 +35,3 @@ def start() -> list:
             password = getpass('Password: ')
 
     print(login, password)
-
-    return login, password

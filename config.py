@@ -1,3 +1,5 @@
+"""Configuration file for DirJourney by de_jure
+"""
 import curses
 
 

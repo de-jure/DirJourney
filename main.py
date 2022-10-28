@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Main file
+"""
 import os
 from ui.path_finder_menu import path_finder_menu
 from core.formats import get_file_editor
