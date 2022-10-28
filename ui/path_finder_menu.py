@@ -1,12 +1,12 @@
 import os
 import curses
-from config import PATH_TEXT_COLOR, PATH_BACKGROUND_COLOR
-from config import UNPICKED_LINE_TEXT_COLOR, UNPICKED_LINE_BACKGROUND_COLOR
-from config import PICKED_LINE_TEXT_COLOR, PICKED_LINE_BACKGROUND_COLOR
 
 
 from utils.dirlist import get_dir_list
 from core.filename_formatter import filename_formatter
+from config import PATH_TEXT_COLOR, PATH_BACKGROUND_COLOR
+from config import UNPICKED_LINE_TEXT_COLOR, UNPICKED_LINE_BACKGROUND_COLOR
+from config import PICKED_LINE_TEXT_COLOR, PICKED_LINE_BACKGROUND_COLOR
 
 
 def path_finder_menu() -> str:
